@@ -2,236 +2,1067 @@
 import { ref } from 'vue'
 
 const cartCount = ref(0)
+
+const categories = [
+  {
+    name: 'T-Shirt',
+    description: 'Comfortable everyday essentials',
+    image: '/images/category-tshirt.jpg'
+  },
+  {
+    name: 'Shirt',
+    description: 'Classic and elegant styles',
+    image: '/images/category-shirt.jpg'
+  },
+  {
+    name: 'Pants',
+    description: 'Simple and versatile fashion',
+    image: '/images/category-pants.jpg'
+  },
+  {
+    name: 'Outerwear',
+    description: 'Layer your style beautifully',
+    image: '/images/category-outerwear.jpg'
+  }
+]
 </script>
 
 <template>
   <div class="home-container">
-    
-    <!-- Hero Banner Section -->
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <header class="hero-wrapper">
-      
-      <!-- Navbar Minimalis -->
+
+      <!-- NAVBAR -->
       <nav class="navbar">
+
+        <!-- LEFT -->
         <div class="nav-left">
-          <router-link to="/shop" class="nav-link">SHOP</router-link>
-          <router-link to="/about" class="nav-link">OUR MISSION</router-link>
-        </div>
 
-        <div class="nav-center">
-          <router-link to="/home" class="brand-logo">PROVIDENTIAL</router-link>
-        </div>
-
-        <div class="nav-right">
-          <!-- Icon Pencarian -->
-          <button class="icon-btn" aria-label="Search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          </button>
-          
-          <!-- Icon Keranjang -->
-          <button class="icon-btn cart-btn" aria-label="Cart">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            <span class="cart-badge">{{ cartCount }}</span>
-          </button>
-
-          <!-- Icon Akun / Login -->
-          <router-link to="/" class="icon-btn" aria-label="Account">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <router-link
+            to="/shop"
+            class="nav-link"
+          >
+            SHOP
           </router-link>
+
+          <router-link
+            to="/about"
+            class="nav-link"
+          >
+            OUR MISSION
+          </router-link>
+
         </div>
+
+
+        <!-- CENTER -->
+        <div class="nav-center">
+
+          <router-link
+            to="/home"
+            class="brand-logo"
+          >
+            PROVIDENTIAL
+          </router-link>
+
+        </div>
+
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+          <!-- SEARCH -->
+          <router-link
+            to="/search"
+            class="icon-btn"
+            aria-label="Search"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+
+              <path
+                d="m21 21-4.3-4.3"
+              />
+            </svg>
+
+          </router-link>
+
+
+          <!-- CART -->
+          <router-link
+            to="/cart"
+            class="icon-btn cart-btn"
+            aria-label="Cart"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+
+              <path
+                d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+              />
+
+              <path
+                d="M3 6h18"
+              />
+
+              <path
+                d="M16 10a4 4 0 0 1-8 0"
+              />
+
+            </svg>
+
+
+            <span class="cart-badge">
+              {{ cartCount }}
+            </span>
+
+          </router-link>
+
+
+          <!-- ACCOUNT -->
+          <router-link
+            to="/user"
+            class="icon-btn"
+            aria-label="Account"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+
+              <path
+                d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+              />
+
+              <circle
+                cx="12"
+                cy="7"
+                r="4"
+              />
+
+            </svg>
+
+          </router-link>
+
+        </div>
+
       </nav>
 
-      <!-- Hero Content -->
+
+      <!-- HERO CONTENT -->
       <div class="hero-content">
+
         <div class="hero-text-card">
-          <h1 class="hero-title">Spreading Comfort & Style</h1>
-          <p class="hero-subtitle">Discover our new pastel apparel collection.</p>
-          <router-link to="/shop" class="btn-hero">Shop Collection</router-link>
+
+          <h1 class="hero-title">
+            Spreading Comfort & Style
+          </h1>
+
+          <p class="hero-subtitle">
+            Discover our new pastel apparel collection.
+          </p>
+
+          <router-link
+            to="/shop"
+            class="btn-hero"
+          >
+            Shop Collection
+          </router-link>
+
         </div>
+
       </div>
 
     </header>
 
-    <!-- Mission / Tagline Section -->
+
+    <!-- =========================
+         MISSION
+    ========================== -->
     <section class="mission-section">
+
       <h2 class="mission-statement">
-        Providential apparel brings effortless elegance and sustainable fashion to wardrobes everywhere.
+        Providential apparel brings effortless elegance and
+        sustainable fashion to wardrobes everywhere.
       </h2>
+
     </section>
 
-    <!-- Floating Support Button -->
+
+    <!-- =========================
+         CATEGORY
+    ========================== -->
+    <section class="category-section">
+
+      <!-- TITLE -->
+      <div class="category-header">
+
+        <p class="category-label">
+          EXPLORE
+        </p>
+
+        <h2 class="category-title">
+          Shop by Category
+        </h2>
+
+        <p class="category-description">
+          Discover timeless pieces designed for comfort,
+          elegance, and everyday style.
+        </p>
+
+      </div>
+
+
+      <!-- CATEGORY GRID -->
+      <div class="category-grid">
+
+        <router-link
+          v-for="category in categories"
+          :key="category.name"
+          to="/shop"
+          class="category-card"
+        >
+
+          <!-- IMAGE -->
+          <div class="category-image-wrapper">
+
+            <img
+              :src="category.image"
+              :alt="category.name"
+              class="category-image"
+            />
+
+            <!-- OVERLAY -->
+            <div class="category-overlay">
+
+              <span class="view-category">
+                View Collection
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- TEXT -->
+          <div class="category-info">
+
+            <h3 class="category-name">
+              {{ category.name }}
+            </h3>
+
+            <p class="category-text">
+              {{ category.description }}
+            </p>
+
+          </div>
+
+        </router-link>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUPPORT
+    ========================== -->
     <button class="support-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+
+        <path
+          d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+        />
+
+        <line
+          x1="12"
+          y1="17"
+          x2="12.01"
+          y2="17"
+        />
+
+      </svg>
+
       Support
+
     </button>
 
   </div>
 </template>
 
+
 <style scoped>
+
+/* =========================
+   GENERAL
+========================= */
+
 .home-container {
   font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  position: relative;
+  color: #111827;
+  background: #ffffff;
   min-height: 100vh;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero-wrapper {
   position: relative;
+
   min-height: 85vh;
-  background: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 50%, #4b5563 100%);
+
   display: flex;
   flex-direction: column;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 250, 242, 0.90) 0%,
+      rgba(255, 250, 242, 0.65) 35%,
+      rgba(255, 250, 242, 0.15) 65%,
+      rgba(255, 250, 242, 0.05) 100%
+    ),
+    url('/images/hero-fashion.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
 }
 
+
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
+  position: relative;
+
+  z-index: 10;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   padding: 1.5rem 3rem;
 }
 
-.nav-left, .nav-right {
+
+/* LEFT */
+
+.nav-left {
   display: flex;
+
   align-items: center;
-  gap: 1.5rem;
+
+  gap: 1.7rem;
 }
+
 
 .nav-link {
-  color: #111827;
+  color: #17243a;
+
   text-decoration: none;
+
   font-size: 0.85rem;
-  font-weight: 600;
+
+  font-weight: 700;
+
   letter-spacing: 1.5px;
+
+  transition: opacity 0.2s ease;
 }
+
 
 .nav-link:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
+
+
+/* CENTER */
+
+.nav-center {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
 
 .brand-logo {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: #111827;
+  color: #17243a;
+
   text-decoration: none;
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
 }
 
-.icon-btn {
-  background: none;
-  border: none;
-  color: #111827;
-  cursor: pointer;
+
+/* RIGHT */
+
+.nav-right {
   display: flex;
+
   align-items: center;
-  justify-content: center;
-  position: relative;
-  text-decoration: none;
+
+  gap: 1.3rem;
 }
+
+
+/* ICON */
+
+.icon-btn {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #17243a;
+
+  background: transparent;
+
+  border: none;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.7;
+}
+
+
+/* CART */
 
 .cart-badge {
   position: absolute;
-  top: -6px;
-  right: -8px;
-  background-color: #ffffff;
-  color: #111827;
-  font-size: 0.65rem;
-  font-weight: bold;
-  border-radius: 50%;
+
+  top: -8px;
+
+  right: -9px;
+
   width: 16px;
+
   height: 16px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  background: #ffffff;
+
+  color: #17243a;
+
+  border-radius: 50%;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.15);
 }
+
+
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content {
   flex: 1;
+
   display: flex;
+
   align-items: center;
-  padding: 0 4rem;
+
+  padding: 0 3.5rem;
 }
+
 
 .hero-text-card {
-  max-width: 450px;
+  max-width: 480px;
+
+  margin-top: -20px;
 }
+
 
 .hero-title {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
+  margin: 0 0 1rem;
+
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 3.2rem;
+
   font-weight: 500;
-  color: #111827;
-  line-height: 1.15;
-  margin-bottom: 1rem;
+
+  line-height: 1.12;
+
+  color: #17243a;
+
+  letter-spacing: -1px;
 }
 
+
 .hero-subtitle {
-  color: #f3f4f6;
-  font-size: 1.1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.8rem;
+
+  color: #344258;
+
+  font-size: 1.05rem;
+
+  line-height: 1.6;
 }
+
+
+/* =========================
+   HERO BUTTON
+========================= */
 
 .btn-hero {
   display: inline-block;
-  padding: 0.85rem 2rem;
-  background-color: #111827;
+
+  padding: 0.9rem 2rem;
+
+  background: #17243a;
+
   color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
+
   border-radius: 6px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
+
 .btn-hero:hover {
-  background-color: #374151;
+  background: #27364e;
+
   transform: translateY(-2px);
 }
 
+
+/* =========================
+   MISSION
+========================= */
+
 .mission-section {
   padding: 5rem 3rem;
-  background-color: #ffffff;
-  text-align: left;
+
+  background: #ffffff;
 }
 
+
 .mission-statement {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #111827;
   max-width: 900px;
+
+  margin: 0;
+
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 2.4rem;
+
+  font-weight: 400;
+
   line-height: 1.3;
+
+  color: #17243a;
 }
+
+
+/* =========================
+   CATEGORY SECTION
+========================= */
+
+.category-section {
+  padding: 5rem 3rem 7rem;
+
+  background: #f8f6f2;
+}
+
+
+/* HEADER */
+
+.category-header {
+  text-align: center;
+
+  max-width: 650px;
+
+  margin: 0 auto 3.5rem;
+}
+
+
+.category-label {
+  margin: 0 0 0.8rem;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #6b7280;
+}
+
+
+.category-title {
+  margin: 0 0 1rem;
+
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 2.8rem;
+
+  font-weight: 400;
+
+  color: #17243a;
+}
+
+
+.category-description {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CATEGORY GRID
+========================= */
+
+.category-grid {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1.5rem;
+}
+
+
+/* CATEGORY CARD */
+
+.category-card {
+  display: block;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  color: #17243a;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.category-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(23, 36, 58, 0.12);
+}
+
+
+/* IMAGE */
+
+.category-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 360px;
+
+  overflow: hidden;
+
+  background: #e8e3dc;
+}
+
+
+.category-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.category-card:hover .category-image {
+  transform: scale(1.05);
+}
+
+
+/* OVERLAY */
+
+.category-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(23, 36, 58, 0.35);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+
+.view-category {
+  padding: 0.75rem 1.2rem;
+
+  background: #ffffff;
+
+  color: #17243a;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* INFO */
+
+.category-info {
+  padding: 1.4rem 1.2rem 1.6rem;
+
+  text-align: center;
+}
+
+
+.category-name {
+  margin: 0 0 0.5rem;
+
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+
+  font-weight: 500;
+
+  color: #17243a;
+}
+
+
+.category-text {
+  margin: 0;
+
+  color: #7b8190;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   SUPPORT
+========================= */
 
 .support-btn {
   position: fixed;
-  bottom: 20px;
+
   right: 20px;
-  background-color: #374151;
-  color: #ffffff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+
+  bottom: 20px;
+
+  z-index: 100;
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
+  padding: 0.65rem 1.2rem;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #27364e;
+
+  color: white;
+
   font-size: 0.85rem;
+
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
+
+.support-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .category-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .category-image-wrapper {
+    height: 320px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+
+
+  .brand-logo {
+    font-size: 1.5rem;
+  }
+
+
+  .hero-content {
+    padding: 0 2rem;
+  }
+
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
   .navbar {
     padding: 1rem;
   }
-  .hero-title {
-    font-size: 2rem;
+
+
+  .nav-left {
+    gap: 0.8rem;
   }
-  .mission-statement {
-    font-size: 1.75rem;
+
+
+  .nav-link {
+    font-size: 0.7rem;
   }
+
+
+  .brand-logo {
+    font-size: 1.15rem;
+
+    letter-spacing: 2px;
+  }
+
+
+  .nav-right {
+    gap: 0.8rem;
+  }
+
+
+  .hero-wrapper {
+    min-height: 80vh;
+
+    background-position: 65% center;
+  }
+
+
   .hero-content {
     padding: 0 1.5rem;
   }
+
+
+  .hero-text-card {
+    max-width: 330px;
+  }
+
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+
+  .mission-section {
+    padding: 3rem 1.5rem;
+  }
+
+
+  .mission-statement {
+    font-size: 1.7rem;
+  }
+
+
+  /* CATEGORY MOBILE */
+
+  .category-section {
+    padding: 4rem 1.5rem 5rem;
+  }
+
+
+  .category-title {
+    font-size: 2.2rem;
+  }
+
+
+  .category-description {
+    font-size: 0.9rem;
+  }
+
+
+  .category-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+
+  .category-image-wrapper {
+    height: 420px;
+  }
+
 }
+
 </style>
