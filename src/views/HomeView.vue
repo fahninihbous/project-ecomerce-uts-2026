@@ -1,8 +1,3 @@
-<template>
-  <!-- Vue Router akan otomatis menampilkan HomeView di '/' atau LoginView di '/login' -->
-  <router-view />
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -23,7 +18,7 @@ const cartCount = ref(0)
         </div>
 
         <div class="nav-center">
-          <router-link to="/" class="brand-logo">ATELIER</router-link>
+          <router-link to="/home" class="brand-logo">PROVIDENTIAL</router-link>
         </div>
 
         <div class="nav-right">
@@ -39,7 +34,7 @@ const cartCount = ref(0)
           </button>
 
           <!-- Icon Akun / Login -->
-          <router-link to="/login" class="icon-btn" aria-label="Account">
+          <router-link to="/" class="icon-btn" aria-label="Account">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </router-link>
         </div>
@@ -56,10 +51,10 @@ const cartCount = ref(0)
 
     </header>
 
-    <!-- Mission / Tagline Section (Bawah Hero) -->
+    <!-- Mission / Tagline Section -->
     <section class="mission-section">
       <h2 class="mission-statement">
-        ATELIER apparel brings effortless elegance and sustainable fashion to wardrobes everywhere.
+        Providential apparel brings effortless elegance and sustainable fashion to wardrobes everywhere.
       </h2>
     </section>
 
@@ -75,7 +70,7 @@ const cartCount = ref(0)
 <style scoped>
 .home-container {
   font-family: 'Inter', sans-serif;
-  color: #2c3e50;
+  color: #1a1a1a;
   background-color: #ffffff;
   position: relative;
   min-height: 100vh;
@@ -84,7 +79,7 @@ const cartCount = ref(0)
 .hero-wrapper {
   position: relative;
   min-height: 85vh;
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 50%, #4b5563 100%);
   display: flex;
   flex-direction: column;
 }
@@ -103,7 +98,7 @@ const cartCount = ref(0)
 }
 
 .nav-link {
-  color: #1e3a8a;
+  color: #111827;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
@@ -118,14 +113,14 @@ const cartCount = ref(0)
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 4px;
-  color: #1e3a8a;
+  color: #111827;
   text-decoration: none;
 }
 
 .icon-btn {
   background: none;
   border: none;
-  color: #1e3a8a;
+  color: #111827;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -139,7 +134,7 @@ const cartCount = ref(0)
   top: -6px;
   right: -8px;
   background-color: #ffffff;
-  color: #1e3a8a;
+  color: #111827;
   font-size: 0.65rem;
   font-weight: bold;
   border-radius: 50%;
@@ -165,13 +160,13 @@ const cartCount = ref(0)
   font-size: 3rem;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  color: #ffffff;
+  color: #111827;
   line-height: 1.15;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  color: #eff6ff;
+  color: #f3f4f6;
   font-size: 1.1rem;
   margin-bottom: 1.75rem;
 }
@@ -179,7 +174,7 @@ const cartCount = ref(0)
 .btn-hero {
   display: inline-block;
   padding: 0.85rem 2rem;
-  background-color: #1e3a8a;
+  background-color: #111827;
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
@@ -189,7 +184,7 @@ const cartCount = ref(0)
 }
 
 .btn-hero:hover {
-  background-color: #1e40af;
+  background-color: #374151;
   transform: translateY(-2px);
 }
 
@@ -203,7 +198,7 @@ const cartCount = ref(0)
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 400;
-  color: #1e3a8a;
+  color: #111827;
   max-width: 900px;
   line-height: 1.3;
 }
@@ -212,7 +207,7 @@ const cartCount = ref(0)
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #475569;
+  background-color: #374151;
   color: #ffffff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -238,18 +233,5 @@ const cartCount = ref(0)
   .hero-content {
     padding: 0 1.5rem;
   }
-}
-</style>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
 }
 </style>
