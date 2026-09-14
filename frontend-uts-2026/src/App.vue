@@ -1,16 +1,19 @@
-<script setup>
-import { RouterView } from 'vue-router'
-</script>
-
 <template>
-  <RouterView v-slot="{ Component }">
-    <!-- Efek transisi halaman fade saat berpindah route -->
-    <transition name="page" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </RouterView>
+  <router-view />
 </template>
 
-<style scoped>
-/* Transisi halaman sudah ada di style.css */
+<script setup>
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
 </style>
