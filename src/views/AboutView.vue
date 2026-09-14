@@ -12,10 +12,10 @@
       <!-- Content Section -->
       <section class="content-section">
         <div class="info-card">
-          <h2>Tentang Kami</h2>
+          <h2>About Us</h2>
           <p>
-            Providential hadir untuk memberikan pengalaman berpakaian yang elegan, simpel, dan timeless. 
-            Kami percaya bahwa keindahan sejati dalam fashion terletak pada kesederhanaan dan kualitas bahan terbaik.
+           Providential is here to provide an elegant, simple, and timeless dressing experience.
+           We believe that true beauty in fashion lies in simplicity and the finest quality materials.
           </p>
         </div>
 
@@ -23,28 +23,28 @@
         <div class="values-grid">
           <div class="value-card">
             <div class="icon">✨</div>
-            <h3>Desain Minimalis</h3>
-            <p>Potongan baju modern dan bersih yang cocok dipadukan untuk berbagai acara.</p>
+            <h3>Minimalist Design</h3>
+            <p>Modern and clean cuts that can be easily combined for various occasions.</p>
           </div>
 
           <div class="value-card">
             <div class="icon">🌿</div>
-            <h3>Kualitas Bahan</h3>
-            <p>Menggunakan kain pilihan yang nyaman, lembut di kulit, dan tahan lama.</p>
+            <h3>Material Quality</h3>
+            <p>Using premium fabrics that are comfortable, soft against the skin, and durable.</p>
           </div>
 
           <div class="value-card">
             <div class="icon">💙</div>
             <h3>Sustained Style</h3>
-            <p>Koleksi yang diproduksi secara etis dan mengutamakan keberlanjutan.</p>
+            <p>Timeless designs that stand the test of time and remain relevant across seasons.</p>
           </div>
         </div>
       </section>
 
       <!-- Link Navigasi Kembali -->
       <div class="action-footer">
-        <router-link to="/" class="btn-back">Kembali ke Beranda</router-link>
-        <router-link to="/login" class="btn-login">Masuk ke Akun</router-link>
+        <router-link to="/" class="btn-back">Back to Home</router-link>
+        <router-link to="/login" class="btn-login">Sign in to Account</router-link>
       </div>
 
     </div>

@@ -44,8 +44,8 @@ const handleLogin = () => {
 
         <div class="form-group">
           <div class="label-row">
-            <label for="password">Kata Sandi</label>
-            <a href="#" class="forgot-link">Lupa kata sandi?</a>
+            <label for="password">Password</label>
+            <a href="#" class="forgot-link">Forget password?</a>
           </div>
           <input 
             id="password"
@@ -64,7 +64,7 @@ const handleLogin = () => {
             type="checkbox" 
             class="checkbox-input"
           />
-          <label for="remember">Ingat saya di perangkat ini</label>
+          <label for="remember">Remember me on this device</label>
         </div>
 
         <button 
@@ -72,18 +72,18 @@ const handleLogin = () => {
           :disabled="isLoading"
           class="submit-btn"
         >
-          <span v-if="!isLoading">Masuk</span>
-          <span v-else>Memproses...</span>
+          <span v-if="!isLoading">Sign in</span>
+          <span v-else>Processing...</span>
         </button>
       </form>
 
       <div class="divider">
-        <span>Atau masuk dengan</span>
+        <span>Or sign in with</span>
       </div>
 
       <p class="footer-text">
-        Belum memiliki akun? 
-        <a href="#" class="register-link">Daftar sekarang</a>
+        Don't have an account? 
+        <a href="#" class="register-link">Register now</a>
       </p>
 
     </div>
