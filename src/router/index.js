@@ -6,7 +6,8 @@ import LoginView from '../views/LoginView.vue'
 import Cart from '../views/Cart.vue'
 import Search from '../views/Search.vue'
 import ProductDetail from '../views/ProductDetail.vue'
-import Category from '../views/Category.vue'
+import Checkout from '../views/Checkout.vue'
+import PlaceOrder from '../views/PlaceOrder.vue'
 
 const routes = [
   {
@@ -51,10 +52,17 @@ const routes = [
   },
 
   {
-    path: '/category',
-    name: 'category',
-    component: Category
+    path: '/checkout',
+    name: 'checkout',
+    component: Checkout
+  },
+
+  {
+    path: '/placeorder',
+    name: 'placeorder',
+    component: PlaceOrder
   }
+
 ]
 
 const router = createRouter({

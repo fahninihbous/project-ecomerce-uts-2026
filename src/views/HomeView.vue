@@ -33,12 +33,13 @@ const categories = [
     <!-- =========================
          HERO
     ========================== -->
+
     <header class="hero-wrapper">
 
       <!-- NAVBAR -->
       <nav class="navbar">
 
-        <!-- LEFT -->
+        <!-- LEFT NAV -->
         <div class="nav-left">
 
           <router-link
@@ -58,7 +59,7 @@ const categories = [
         </div>
 
 
-        <!-- CENTER -->
+        <!-- CENTER LOGO -->
         <div class="nav-center">
 
           <router-link
@@ -71,7 +72,7 @@ const categories = [
         </div>
 
 
-        <!-- RIGHT -->
+        <!-- RIGHT NAV -->
         <div class="nav-right">
 
           <!-- SEARCH -->
@@ -124,7 +125,6 @@ const categories = [
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-
               <path
                 d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
               />
@@ -136,7 +136,6 @@ const categories = [
               <path
                 d="M16 10a4 4 0 0 1-8 0"
               />
-
             </svg>
 
 
@@ -165,7 +164,6 @@ const categories = [
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-
               <path
                 d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
               />
@@ -175,7 +173,6 @@ const categories = [
                 cy="7"
                 r="4"
               />
-
             </svg>
 
           </router-link>
@@ -195,7 +192,7 @@ const categories = [
           </h1>
 
           <p class="hero-subtitle">
-            Discover our new pastel apparel collection.
+            Discover our new apparel collection.
           </p>
 
           <router-link
@@ -215,6 +212,7 @@ const categories = [
     <!-- =========================
          MISSION
     ========================== -->
+
     <section class="mission-section">
 
       <h2 class="mission-statement">
@@ -228,9 +226,11 @@ const categories = [
     <!-- =========================
          CATEGORY
     ========================== -->
+
     <section class="category-section">
 
-      <!-- TITLE -->
+      <!-- CATEGORY HEADER -->
+
       <div class="category-header">
 
         <p class="category-label">
@@ -250,6 +250,7 @@ const categories = [
 
 
       <!-- CATEGORY GRID -->
+
       <div class="category-grid">
 
         <router-link
@@ -259,7 +260,8 @@ const categories = [
           class="category-card"
         >
 
-          <!-- IMAGE -->
+          <!-- CATEGORY IMAGE -->
+
           <div class="category-image-wrapper">
 
             <img
@@ -268,7 +270,9 @@ const categories = [
               class="category-image"
             />
 
+
             <!-- OVERLAY -->
+
             <div class="category-overlay">
 
               <span class="view-category">
@@ -280,7 +284,8 @@ const categories = [
           </div>
 
 
-          <!-- TEXT -->
+          <!-- CATEGORY TEXT -->
+
           <div class="category-info">
 
             <h3 class="category-name">
@@ -303,6 +308,7 @@ const categories = [
     <!-- =========================
          SUPPORT
     ========================== -->
+
     <button class="support-btn">
 
       <svg
@@ -351,10 +357,16 @@ const categories = [
 ========================= */
 
 .home-container {
-  font-family: 'Inter', sans-serif;
-  color: #111827;
-  background: #ffffff;
   min-height: 100vh;
+
+  font-family:
+    'Inter',
+    Arial,
+    sans-serif;
+
+  color: #111111;
+
+  background: #ffffff;
 }
 
 
@@ -373,10 +385,10 @@ const categories = [
   background-image:
     linear-gradient(
       to right,
-      rgba(255, 250, 242, 0.90) 0%,
-      rgba(255, 250, 242, 0.65) 35%,
-      rgba(255, 250, 242, 0.15) 65%,
-      rgba(255, 250, 242, 0.05) 100%
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 255, 255, 0.78) 30%,
+      rgba(255, 255, 255, 0.30) 65%,
+      rgba(255, 255, 255, 0.05) 100%
     ),
     url('/images/hero-fashion.jpg');
 
@@ -385,6 +397,8 @@ const categories = [
   background-position: center;
 
   background-repeat: no-repeat;
+
+  border-bottom: 1px solid #dddddd;
 }
 
 
@@ -404,10 +418,18 @@ const categories = [
   align-items: center;
 
   padding: 1.5rem 3rem;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(8px);
 }
 
 
-/* LEFT */
+/* =========================
+   LEFT NAV
+========================= */
 
 .nav-left {
   display: flex;
@@ -419,7 +441,7 @@ const categories = [
 
 
 .nav-link {
-  color: #17243a;
+  color: #111111;
 
   text-decoration: none;
 
@@ -429,16 +451,22 @@ const categories = [
 
   letter-spacing: 1.5px;
 
-  transition: opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 
 .nav-link:hover {
-  opacity: 0.6;
+  color: #666666;
+
+  opacity: 0.7;
 }
 
 
-/* CENTER */
+/* =========================
+   CENTER LOGO
+========================= */
 
 .nav-center {
   position: absolute;
@@ -450,7 +478,7 @@ const categories = [
 
 
 .brand-logo {
-  color: #17243a;
+  color: #111111;
 
   text-decoration: none;
 
@@ -459,10 +487,19 @@ const categories = [
   font-weight: 800;
 
   letter-spacing: 4px;
+
+  white-space: nowrap;
 }
 
 
-/* RIGHT */
+.brand-logo:hover {
+  color: #555555;
+}
+
+
+/* =========================
+   RIGHT NAV
+========================= */
 
 .nav-right {
   display: flex;
@@ -473,7 +510,9 @@ const categories = [
 }
 
 
-/* ICON */
+/* =========================
+   ICON
+========================= */
 
 .icon-btn {
   position: relative;
@@ -484,7 +523,7 @@ const categories = [
 
   justify-content: center;
 
-  color: #17243a;
+  color: #111111;
 
   background: transparent;
 
@@ -496,18 +535,20 @@ const categories = [
 
   transition:
     transform 0.2s ease,
-    opacity 0.2s ease;
+    color 0.2s ease;
 }
 
 
 .icon-btn:hover {
   transform: translateY(-2px);
 
-  opacity: 0.7;
+  color: #666666;
 }
 
 
-/* CART */
+/* =========================
+   CART BADGE
+========================= */
 
 .cart-badge {
   position: absolute;
@@ -526,9 +567,9 @@ const categories = [
 
   justify-content: center;
 
-  background: #ffffff;
+  background: #111111;
 
-  color: #17243a;
+  color: #ffffff;
 
   border-radius: 50%;
 
@@ -537,7 +578,7 @@ const categories = [
   font-weight: 700;
 
   box-shadow:
-    0 1px 4px rgba(0, 0, 0, 0.15);
+    0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -563,6 +604,10 @@ const categories = [
 }
 
 
+/* =========================
+   HERO TITLE
+========================= */
+
 .hero-title {
   margin: 0 0 1rem;
 
@@ -577,16 +622,16 @@ const categories = [
 
   line-height: 1.12;
 
-  color: #17243a;
+  color: #111111;
 
   letter-spacing: -1px;
 }
 
 
 .hero-subtitle {
-  margin-bottom: 1.8rem;
+  margin: 0 0 1.8rem;
 
-  color: #344258;
+  color: #444444;
 
   font-size: 1.05rem;
 
@@ -603,17 +648,19 @@ const categories = [
 
   padding: 0.9rem 2rem;
 
-  background: #17243a;
+  background: #111111;
 
   color: #ffffff;
 
-  border-radius: 6px;
+  border-radius: 3px;
 
   text-decoration: none;
 
   font-size: 0.9rem;
 
   font-weight: 600;
+
+  letter-spacing: 0.3px;
 
   transition:
     background 0.2s ease,
@@ -622,7 +669,7 @@ const categories = [
 
 
 .btn-hero:hover {
-  background: #27364e;
+  background: #444444;
 
   transform: translateY(-2px);
 }
@@ -636,6 +683,8 @@ const categories = [
   padding: 5rem 3rem;
 
   background: #ffffff;
+
+  border-bottom: 1px solid #dddddd;
 }
 
 
@@ -655,7 +704,7 @@ const categories = [
 
   line-height: 1.3;
 
-  color: #17243a;
+  color: #111111;
 }
 
 
@@ -666,31 +715,33 @@ const categories = [
 .category-section {
   padding: 5rem 3rem 7rem;
 
-  background: #f8f6f2;
+  background: #eeeeee;
 }
 
 
-/* HEADER */
+/* =========================
+   CATEGORY HEADER
+========================= */
 
 .category-header {
-  text-align: center;
-
   max-width: 650px;
 
   margin: 0 auto 3.5rem;
+
+  text-align: center;
 }
 
 
 .category-label {
   margin: 0 0 0.8rem;
 
+  color: #666666;
+
   font-size: 0.75rem;
 
   font-weight: 700;
 
   letter-spacing: 3px;
-
-  color: #6b7280;
 }
 
 
@@ -706,14 +757,14 @@ const categories = [
 
   font-weight: 400;
 
-  color: #17243a;
+  color: #111111;
 }
 
 
 .category-description {
   margin: 0;
 
-  color: #6b7280;
+  color: #555555;
 
   font-size: 1rem;
 
@@ -739,18 +790,22 @@ const categories = [
 }
 
 
-/* CATEGORY CARD */
+/* =========================
+   CATEGORY CARD
+========================= */
 
 .category-card {
   display: block;
 
+  overflow: hidden;
+
   background: #ffffff;
+
+  color: #111111;
 
   text-decoration: none;
 
-  color: #17243a;
-
-  overflow: hidden;
+  border: 1px solid #d5d5d5;
 
   transition:
     transform 0.3s ease,
@@ -762,11 +817,13 @@ const categories = [
   transform: translateY(-6px);
 
   box-shadow:
-    0 15px 35px rgba(23, 36, 58, 0.12);
+    0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 
-/* IMAGE */
+/* =========================
+   CATEGORY IMAGE
+========================= */
 
 .category-image-wrapper {
   position: relative;
@@ -777,7 +834,7 @@ const categories = [
 
   overflow: hidden;
 
-  background: #e8e3dc;
+  background: #cccccc;
 }
 
 
@@ -786,21 +843,28 @@ const categories = [
 
   height: 100%;
 
-  object-fit: cover;
-
   display: block;
 
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
   transition:
-    transform 0.5s ease;
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 
 .category-card:hover .category-image {
   transform: scale(1.05);
+
+  filter: grayscale(80%);
 }
 
 
-/* OVERLAY */
+/* =========================
+   CATEGORY OVERLAY
+========================= */
 
 .category-overlay {
   position: absolute;
@@ -813,13 +877,11 @@ const categories = [
 
   justify-content: center;
 
-  background:
-    rgba(23, 36, 58, 0.35);
+  background: rgba(0, 0, 0, 0.45);
 
   opacity: 0;
 
-  transition:
-    opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -833,7 +895,7 @@ const categories = [
 
   background: #ffffff;
 
-  color: #17243a;
+  color: #111111;
 
   font-size: 0.8rem;
 
@@ -845,12 +907,16 @@ const categories = [
 }
 
 
-/* INFO */
+/* =========================
+   CATEGORY INFO
+========================= */
 
 .category-info {
   padding: 1.4rem 1.2rem 1.6rem;
 
   text-align: center;
+
+  background: #ffffff;
 }
 
 
@@ -866,14 +932,14 @@ const categories = [
 
   font-weight: 500;
 
-  color: #17243a;
+  color: #111111;
 }
 
 
 .category-text {
   margin: 0;
 
-  color: #7b8190;
+  color: #666666;
 
   font-size: 0.85rem;
 
@@ -906,24 +972,27 @@ const categories = [
 
   border-radius: 25px;
 
-  background: #27364e;
+  background: #111111;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 0.85rem;
 
   cursor: pointer;
 
   box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.18);
+    0 4px 15px rgba(0, 0, 0, 0.25);
 
   transition:
-    transform 0.2s ease;
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 
 .support-btn:hover {
   transform: translateY(-2px);
+
+  background: #444444;
 }
 
 
@@ -951,16 +1020,13 @@ const categories = [
     padding: 1.2rem 1.5rem;
   }
 
-
   .brand-logo {
     font-size: 1.5rem;
   }
 
-
   .hero-content {
     padding: 0 2rem;
   }
-
 
   .hero-title {
     font-size: 2.6rem;
@@ -975,16 +1041,13 @@ const categories = [
     padding: 1rem;
   }
 
-
   .nav-left {
     gap: 0.8rem;
   }
 
-
   .nav-link {
     font-size: 0.7rem;
   }
-
 
   .brand-logo {
     font-size: 1.15rem;
@@ -992,11 +1055,9 @@ const categories = [
     letter-spacing: 2px;
   }
 
-
   .nav-right {
     gap: 0.8rem;
   }
-
 
   .hero-wrapper {
     min-height: 80vh;
@@ -1004,31 +1065,25 @@ const categories = [
     background-position: 65% center;
   }
 
-
   .hero-content {
     padding: 0 1.5rem;
   }
-
 
   .hero-text-card {
     max-width: 330px;
   }
 
-
   .hero-title {
     font-size: 2.2rem;
   }
-
 
   .hero-subtitle {
     font-size: 0.95rem;
   }
 
-
   .mission-section {
     padding: 3rem 1.5rem;
   }
-
 
   .mission-statement {
     font-size: 1.7rem;
@@ -1041,23 +1096,19 @@ const categories = [
     padding: 4rem 1.5rem 5rem;
   }
 
-
   .category-title {
     font-size: 2.2rem;
   }
 
-
   .category-description {
     font-size: 0.9rem;
   }
-
 
   .category-grid {
     grid-template-columns: 1fr;
 
     gap: 1.5rem;
   }
-
 
   .category-image-wrapper {
     height: 420px;
