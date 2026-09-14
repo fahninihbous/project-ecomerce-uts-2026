@@ -1,6 +1,8 @@
 <script setup>
 import { reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const isLoading = ref(false)
 
 const form = reactive({
@@ -13,9 +15,8 @@ const handleLogin = () => {
   isLoading.value = true
   
   setTimeout(() => {
-    console.log('Data form dikirim:', form)
-    alert(`Login berhasil untuk: ${form.email}`)
     isLoading.value = false
+    router.push('/home')
   }, 1200)
 }
 </script>
@@ -23,9 +24,8 @@ const handleLogin = () => {
 <template>
   <div class="login-wrapper">
     <div class="login-card">
-      2
       <div class="brand-header">
-        <h1 class="brand-title">Providential</h1>
+        <h1 class="brand-title">PROVIDENTIAL</h1>
         <p class="brand-subtitle">Minimalist Fashion & Apparel</p>
       </div>
 
@@ -92,9 +92,9 @@ const handleLogin = () => {
 
 <style scoped>
 .login-wrapper {
-  width: 100vw; /* Mengisi seluruh lebar viewport */
-  min-height: 100vh; /* Mengisi seluruh tinggi viewport */
-  background-color: #f0f7f9; /* atau #ffffff */
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f3f4f6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,15 +102,14 @@ const handleLogin = () => {
   padding: 0;
 }
 
-
 .login-card {
   width: 100%;
   max-width: 400px;
   background-color: #ffffff;
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 10px 25px -5px rgba(174, 198, 207, 0.3);
-  border: 1px solid #e1eef2;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
 }
 
 .brand-header {
@@ -121,7 +120,7 @@ const handleLogin = () => {
 .brand-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color:  #93c5fd;
+  color: #111827;
   letter-spacing: 2px;
   margin: 0;
 }
@@ -129,7 +128,7 @@ const handleLogin = () => {
 .brand-subtitle {
   font-size: 0.7rem;
   letter-spacing: 1.5px;
-  color: #88a0a8;
+  color: #6b7280;
   text-transform: uppercase;
   margin-top: 4px;
 }
@@ -148,7 +147,7 @@ const handleLogin = () => {
 
 .form-group label {
   font-size: 0.85rem;
-  color: #5a6e75;
+  color: #374151;
   font-weight: 500;
 }
 
@@ -160,21 +159,17 @@ const handleLogin = () => {
 
 .forgot-link {
   font-size: 0.75rem;
-  color: #72a2b0;
+  color: #6b7280;
   text-decoration: none;
-}
-
-.forgot-link:hover {
-  text-decoration: underline;
 }
 
 .input-field {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  background-color: #f7fafb;
-  border: 1px solid #d1e3e8;
-  color: #2c3e50;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  color: #111827;
   outline: none;
   box-sizing: border-box;
   transition: all 0.2s ease;
@@ -182,8 +177,8 @@ const handleLogin = () => {
 
 .input-field:focus {
   background-color: #ffffff;
-  border-color: #93c5fd;
-  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.25);
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.25);
 }
 
 .checkbox-group {
@@ -191,11 +186,11 @@ const handleLogin = () => {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
-  color: #6b7c85;
+  color: #4b5563;
 }
 
 .checkbox-input {
-  accent-color: #93c5fd;
+  accent-color: #4b5563;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -204,8 +199,8 @@ const handleLogin = () => {
 .submit-btn {
   width: 100%;
   padding: 0.85rem;
-  background-color: #b9e0f2;
-  color: #1e3a8a;
+  background-color: #111827;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-weight: 600;
@@ -215,11 +210,7 @@ const handleLogin = () => {
 }
 
 .submit-btn:hover {
-  background-color: #a3d5ec;
-}
-
-.submit-btn:active {
-  transform: scale(0.98);
+  background-color: #374151;
 }
 
 .submit-btn:disabled {
@@ -240,7 +231,7 @@ const handleLogin = () => {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #e1eef2;
+  background-color: #e5e7eb;
 }
 
 .divider span {
@@ -248,24 +239,20 @@ const handleLogin = () => {
   background-color: #ffffff;
   padding: 0 0.5rem;
   font-size: 0.75rem;
-  color: #a0b2b8;
+  color: #9ca3af;
   text-transform: uppercase;
 }
 
 .footer-text {
   text-align: center;
   font-size: 0.85rem;
-  color: #6b7c85;
+  color: #4b5563;
   margin-top: 1rem;
 }
 
 .register-link {
-  color: #72a2b0;
+  color: #111827;
   font-weight: 600;
   text-decoration: none;
-}
-
-.register-link:hover {
-  text-decoration: underline;
 }
 </style>

@@ -4,7 +4,7 @@
       
       <!-- Hero Section -->
       <section class="hero-section">
-        <h1 class="brand-title">Providential</h1>
+        <h1 class="brand-title">PROVIDENTIAL</h1>
         <p class="brand-tagline">Minimalist Fashion & Apparel</p>
         <div class="divider-line"></div>
       </section>
@@ -54,7 +54,7 @@
 <style scoped>
 .about-wrapper {
   min-height: 100vh;
-  background-color: #f0f7f9;
+  background-color: #f3f4f6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,8 +68,8 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 10px 25px -5px rgba(174, 198, 207, 0.3);
-  border: 1px solid #e1eef2;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
 }
 
 /* Hero Section */
@@ -81,7 +81,7 @@
 .brand-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #111827;
   letter-spacing: 3px;
   margin: 0;
 }
@@ -89,7 +89,7 @@
 .brand-tagline {
   font-size: 0.8rem;
   letter-spacing: 2px;
-  color: #88a0a8;
+  color: #6b7280;
   text-transform: uppercase;
   margin-top: 6px;
 }
@@ -97,7 +97,7 @@
 .divider-line {
   width: 60px;
   height: 3px;
-  background-color: #b9e0f2;
+  background-color: #9ca3af;
   margin: 1.5rem auto 0;
   border-radius: 2px;
 }
@@ -110,12 +110,12 @@
 
 .info-card h2 {
   font-size: 1.3rem;
-  color: #2c3e50;
+  color: #111827;
   margin-bottom: 0.75rem;
 }
 
 .info-card p {
-  color: #5a6e75;
+  color: #4b5563;
   line-height: 1.6;
   font-size: 0.95rem;
   max-width: 600px;
@@ -131,8 +131,8 @@
 }
 
 .value-card {
-  background-color: #f7fafb;
-  border: 1px solid #e1eef2;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
@@ -150,13 +150,13 @@
 
 .value-card h3 {
   font-size: 1rem;
-  color: #2c3e50;
+  color: #111827;
   margin-bottom: 0.5rem;
 }
 
 .value-card p {
   font-size: 0.8rem;
-  color: #6b7c85;
+  color: #6b7280;
   line-height: 1.4;
   margin: 0;
 }
@@ -179,21 +179,21 @@
 }
 
 .btn-back {
-  background-color: #f0f7f9;
-  color: #5a6e75;
-  border: 1px solid #d1e3e8;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
 }
 
 .btn-back:hover {
-  background-color: #e1eef2;
+  background-color: #e5e7eb;
 }
 
 .btn-login {
-  background-color: #b9e0f2;
-  color: #1e3a8a;
+  background-color: #111827;
+  color: #ffffff;
 }
 
 .btn-login:hover {
-  background-color: #a3d5ec;
+  background-color: #374151;
 }
 </style>
