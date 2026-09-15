@@ -1,23 +1,26 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-
-const router = useRouter()
-const isLoading = ref(false)
-
-const form = reactive({
-  email: '',
-  password: '',
-  remember: false
+import { onMounted } from 'vue'
+onMounted(() => {
+  setTimeout(() => {
+    router.push('/home')
+  }, 1000)
 })
 
-const handleLogin = () => {
-  isLoading.value = true
-  
-  setTimeout(() => {
-    isLoading.value = false
-    router.push('/home')
-  }, 1200)
+const router = useRouter()
+
+const email = ref('')
+const password = ref('')
+
+const login = () => {
+  // proses login
+  if (email.value && password.value) {
+    // setelah login berhasil → User
+    router.push('/user')
+  } else {
+    alert('Email dan password wajib diisi!')
+  }
 }
 </script>
 
