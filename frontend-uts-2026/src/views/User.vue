@@ -9,7 +9,7 @@ const router = useRouter()
 // USER DATA
 // =========================
 const user = ref({
-  name: 'Naura Zahra',
+  name: 'Naura ',
   email: 'naura@example.com',
   phone: '0812 3456 7890',
   address: 'Bandung, Jawa Barat'
