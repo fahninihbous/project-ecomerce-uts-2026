@@ -9,6 +9,8 @@ import ProductDetail from '../views/ProductDetail.vue'
 import Checkout from '../views/Checkout.vue'
 import PlaceOrder from '../views/PlaceOrder.vue'
 
+
+
 const routes = [
   {
     path: '/',
@@ -61,7 +63,49 @@ const routes = [
     path: '/placeorder',
     name: 'placeorder',
     component: PlaceOrder
-  }
+  },
+
+{
+  path: '/user',
+  name: 'user',
+  component: () => import('../views/User.vue')
+},
+{
+  path: '/profile',
+  name: 'profile',
+  component: () => import('../views/Profile.vue')
+},
+{
+  path: '/edit-profile',
+  name: 'edit-profile',
+  component: () => import('../views/EditProfile.vue')
+},
+{
+  path: '/shop',
+  name: 'shop',
+  component: () => import('../views/Shop.vue')
+},
+{
+  path: '/register',
+  name: 'register',
+  component: () => import('../views/Register.vue')
+},
+{
+  path: '/new-products',
+  name: 'new-products',
+  component: () => import('../views/NewProducts.vue')
+},
+{
+  path: '/admin',
+  name: 'admin',
+  component: () => import('../views/Admin.vue')
+},
+{
+  path: '/orders',
+  name: 'orders',
+  component: () => import('../views/MyOrder.vue')
+}
+
 
 ]
 
